@@ -1,0 +1,39 @@
+<br/>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+    <%= form_tag questions_path,:method=>:post do %>
+  <tbody>
+      <% @questions.each do |course| %>
+        <tr>        
+          <% 
+            question = course.question.to_s.split('_') 
+            question_id = question.delete_at(0)
+          %>
+          <td><%=question_id %>(<%=course.trait %>)</td>
+          <td colsspan="4"><%= question.map{ |x| x }.join('_') %></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><%= radio_button_tag "answer[#{question_id}]",1 %>1</td>
+          <td><%= radio_button_tag "answer[#{question_id}]",2 %>2</td>
+          <td><%= radio_button_tag "answer[#{question_id}]",3 %>3</td>
+          <td><%= radio_button_tag "answer[#{question_id}]",4 %>4</td>
+          <td><%= radio_button_tag "answer[#{question_id}]",5 %>5</td>
+        </tr>
+      <% end %>      
+  </tbody>
+</table>
+  <%= hidden_field_tag :step, params[:step]%>
+  <%= submit_tag 'Next'%>
+<% end %>
+
+<br>
+

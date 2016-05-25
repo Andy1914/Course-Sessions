@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Doers:</b>
+  <%= @personality.doers %>
+</p>
+
+<p>
+  <b>Thinkers:</b>
+  <%= @personality.thinkers %>
+</p>
+
+<p>
+  <b>Creators:</b>
+  <%= @personality.creators %>
+</p>
+
+<p>
+  <b>Helpers:</b>
+  <%= @personality.helpers %>
+</p>
+
+<p>
+  <b>Persuaders:</b>
+  <%= @personality.persuaders %>
+</p>
+
+<p>
+  <b>Organizers:</b>
+  <%= @personality.organizers %>
+</p>
+
+
+<%= link_to 'Edit', edit_personality_path(@personality) %> |
+<%= link_to 'Back', personalities_path %>

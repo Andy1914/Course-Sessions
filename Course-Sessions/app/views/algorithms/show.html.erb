@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @algorithm.question %>
+</p>
+
+<p>
+  <b>Trait:</b>
+  <%= @algorithm.trait %>
+</p>
+
+
+<%= link_to 'Edit', edit_algorithm_path(@algorithm) %> |
+<%= link_to 'Back', algorithms_path %>

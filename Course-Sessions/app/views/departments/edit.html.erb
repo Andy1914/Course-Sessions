@@ -1,0 +1,6 @@
+<h1>Editing department</h1>
+<%= form_for @department,:url=>department_path do |f| %>
+<%= render :partial => 'form',:locals=>{:f=>f} %>
+<% end %>
+<%= link_to 'Show', department_path(@department) %> |
+<%= link_to 'Back', departments_path %>

@@ -1,0 +1,2 @@
+module HhcodesHelper
+end

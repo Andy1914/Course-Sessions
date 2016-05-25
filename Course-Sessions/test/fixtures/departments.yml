@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  department: MyString
+  description: MyString
+  personality: MyString
+
+two:
+  department: MyString
+  description: MyString
+  personality: MyString

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Department:</b>
+  <%= @department.name %>
+</p>
+
+<p>
+  <b>Personality Type:</b>
+  <%= @department.personality_types.map { |e| Algorithm::PERSONALITY_TYPE[e.to_i]  }.join(",") %>
+</p>
+
+
+<%= link_to 'Edit', edit_department_path(@department) %> |
+<%= link_to 'Back', departments_path %>

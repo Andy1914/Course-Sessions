@@ -1,0 +1,45 @@
+<h1>Your Background</h1>
+
+
+<h2>Your Education Level</h2>
+<%= label_tag(:resume, "Upload your resume. ") %>
+
+<%= submit_tag("Submit") %>
+
+
+<%= form_for :education do |f| %>
+<%= label_tag(:career_level, "Whats your cuurnt education level?") %>
+<% f.label :special_ids, 'species' %>
+<%= f.select :species_ids, [['Elementary School', 'Es'], ['Middle School', 'Ms'], ['High School', 'Hs'], ['Associate', 'As'], ['Bachelor', 'Ba'], ['Masters', 'Ma'], ['None of the above', 'Ms']], :multiple => true %>
+<% end %>
+
+<%= form_for :education do |f| %>
+<%= label_tag(:career_levele, "Which education department, interests you the most?") %>
+<% f.label :special_ids, 'species' %>
+<%= f.select :speciese_ids, [['Science and Technology', 'st'], ['Accounting', 'acc'], ['Economics', 'econ'], ['Business', 'bus'], ['Foreign Languages and Literatures', 'fl'], ['Linguistics and Philosophy', 'phil'], ['Architecture', 'arch'],['Nursing', 'nurs'],['Writing and Humanistic Studies', 'As'], ['Engineering', 'Eng'], ['History', 'hist']], :multiple => true %>
+<% end %>
+
+
+
+<h3>Your Career Level</h3>
+<%= label_tag(:career_adult, "What professional career, interests you the most ?") %>
+<%= text_field_tag(:q) %>
+</br></br>
+<%= label_tag(:career_adult, "What job position/(s), have you worked at, before ?") %>
+<%= text_field_tag(:q) %>
+
+
+<% @educations.each do |education| %>
+  <tr>
+    <td><%= education.education_level %></td>
+    <td><%= education.job %></td>
+    <td><%= link_to 'Show', education %></td>
+    <td><%= link_to 'Edit', edit_education_path(education) %></td>
+    <td><%= link_to 'Destroy', education, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+</table>
+
+
+<%= submit_tag("Submit") %>
+<% end %>
+<%= link_to 'New Education', new_education_path %>

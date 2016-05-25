@@ -1,0 +1,59 @@
+<h1>Listing hhcodes</h1>
+
+
+<h2>Rate your-self, from a scale 1-5, under these following categories</h2>
+<p> Imaginative      &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Helpful          &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Responsible      &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Methodical       &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Enthusiastic     &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Free Spirit      &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Intuitive        &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p> 
+<p> Practical        &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </p>
+<p>Creative? </p>
+<p>Insightful? </p>     
+<p>Able to do your own thing? </p>
+<p>Precise? </p>
+<p>Efficient? </p>
+<p>Observant? </p>
+<p>Sing, act or dance? </p>     
+<p>Cooperate well with others? </p>
+<p>Teach/train others? </p>     
+<p>Plan and supervise an activity? </p>
+<p>Lead a group? </p>   
+<p>Play a sport? </p>
+
+
+
+
+<table>
+  <tr>
+    <th>Doers</th>
+    <th>Persuaders</th>
+    <th>Helpers</th>
+    <th>Creators</th>
+    <th>Thinkers</th>
+    <th>Organizers</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hhcodes.each do |hhcode| %>
+  <tr>
+    <td><%= hhcode.doers %></td>
+    <td><%= hhcode.persuaders %></td>
+    <td><%= hhcode.helpers %></td>
+    <td><%= hhcode.creators %></td>
+    <td><%= hhcode.thinkers %></td>
+    <td><%= hhcode.organizers %></td>
+    <td><%= link_to 'Show', hhcode %></td>
+    <td><%= link_to 'Edit', edit_hhcode_path(hhcode) %></td>
+    <td><%= link_to 'Destroy', hhcode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hhcode', new_hhcode_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Doers:</b>
+  <%= @hhcode.doers %>
+</p>
+
+<p>
+  <b>Persuaders:</b>
+  <%= @hhcode.persuaders %>
+</p>
+
+<p>
+  <b>Helpers:</b>
+  <%= @hhcode.helpers %>
+</p>
+
+<p>
+  <b>Creators:</b>
+  <%= @hhcode.creators %>
+</p>
+
+<p>
+  <b>Thinkers:</b>
+  <%= @hhcode.thinkers %>
+</p>
+
+<p>
+  <b>Organizers:</b>
+  <%= @hhcode.organizers %>
+</p>
+
+
+<%= link_to 'Edit', edit_hhcode_path(@hhcode) %> |
+<%= link_to 'Back', hhcodes_path %>

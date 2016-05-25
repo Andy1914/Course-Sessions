@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  doers: 1
+  thinkers: 1
+  creators: 1
+  helpers: 1
+  persuaders: 1
+  organizers: 1
+
+two:
+  doers: 1
+  thinkers: 1
+  creators: 1
+  helpers: 1
+  persuaders: 1
+  organizers: 1
